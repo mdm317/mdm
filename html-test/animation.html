@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <style>
+      @keyframes ani1 {
+        from {
+          height: 1000px;
+          width: 1000px;
+        }
+
+        to {
+          height: 100px;
+          width: 100px;
+        }
+      }
+      @keyframes ani2 {
+        from {
+          transform: scale(1);
+        }
+
+        to {
+          transform: scale(0.1);
+        }
+      }
+      .a {
+        animation: ani1 1s;
+      }
+      .b {
+        animation: ani2 1s;
+      }
+      #box {
+        width: 1000px;
+        height: 1000px;
+        background-color: red;
+        transform-origin: top left;
+      }
+    </style>
+    <button>click</button>
+    <div id="box" class="b"></div>
+    <script>
+      const box = document.querySelector("#box");
+      let isA = true;
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", () => {
+        if (isA) {
+          box.className = "b";
+        } else {
+          box.className = "a";
+        }
+        isA = !isA;
+      });
+    </script>
+  </body>
+</html>
