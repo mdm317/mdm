@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>진행도</h1>
+    <h3></h3>
+    <canvas width="300" height="300" id="canvasInput"></canvas>
+    <canvas id="canvasOutput"></canvas>
+    <input id="file-input" type="file" />
+    <button class="btn">go noggi</button>
+    <button class="btn2">go noggi with imgdata</button>
+    <button class="btn-worker">go noggi with worker</button>
+    <button class="down">down</button>
+
+    <script src="https://docs.opencv.org/4.x/opencv.js" type="text/javascript"></script>
+    <script src="./index.js" type="module"></script>
+    <script src="./nuggiWithWebworker.js" type="module"></script>
+  </body>
+</html>
