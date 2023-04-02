@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .container {
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .box {
+        background-color: red;
+        height: 100px;
+        overflow: hidden;
+      }
+      .box p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    </style>
+    <div>
+      <input type="range" id="width" name="width" min="300" max="500" />
+      <label for="width">width</label>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="box">
+          <p>helellsldfsdfsdfhelellsldfsdfsdfhelellsldfsdfsdf</p>
+        </div>
+        <div class="box">
+          <p>helellsldfsdfsdfhelellsldfsdfsdfhelellsldfsdfsdf</p>
+        </div>
+        <div class="box">
+          <p>helellsldfsdfsdfhelellsldfsdfsdfhelellsldfsdfsdf</p>
+        </div>
+        <div class="box">
+          <p>helellsldfsdfsdfhelellsldfsdfsdfhelellsldfsdfsdf</p>
+        </div>
+        <div class="box">
+          <p>helellsldfsdfsdfhelellsldfsdfsdfhelellsldfsdfsdf</p>
+        </div>
+        <div class="box">
+          <p>helellsldfsdfsdfhelellsldfsdfsdfhelellsldfsdfsdf</p>
+        </div>
+        <div class="box">
+          <p>helellsldfsdfsdfhelellsldfsdfsdfhelellsldfsdfsdf</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const input = document.querySelector('#width')
+      const container = document.querySelector('.container')
+      input.addEventListener('change', (e) => {
+        container.style.width = e.target.value + 'px'
+      })
+    </script>
+  </body>
+</html>
