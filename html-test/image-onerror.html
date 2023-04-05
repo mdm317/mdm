@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <picture>
+
+            <img src=""/>
+            <img src="https://ipfs.io/ipfs/QmVzw9dDrPKRc67hQAqfE8CEnn5jMugapgStC3LkHKa2BF"/>
+            <img src="https://picsum.photos/200"/>
+            <video src="https://picsum.photos/200" ></video>
+            
+        </picture>
+
+    </div>
+    <script>
+        window.addEventListener('error',(e) => console.log(e))
+        const imgs = document.querySelectorAll('img')
+        imgs.forEach((img) =>       img.addEventListener('error',(e) => console.log(e)))
+        imgs.forEach((img) =>       img.addEventListener('load',(e) => console.log(e)))
+        const v = document.querySelector('video')
+        v.addEventListener('error',(e) => console.log(e))
+  
+
+    </script>
+</body>
+</html>
