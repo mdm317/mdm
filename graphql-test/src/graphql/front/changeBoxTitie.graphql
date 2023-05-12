@@ -1,0 +1,10 @@
+mutation ChangeBoxTitle($id: Int!) {
+  changeBoxTitle(id: $id) {
+    id
+    title
+  }
+}
+
+mutation ChangeBoxTitleStrangeOutput($id: Int!) {
+  changeBoxTitleStrangeOutput(id: $id)
+}

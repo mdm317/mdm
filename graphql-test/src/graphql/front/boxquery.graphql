@@ -1,0 +1,10 @@
+query BoxList($nxt: Int) {
+  boxList(nxt: $nxt) {
+    nxt
+    data {
+      id
+      title
+      color
+    }
+  }
+}
